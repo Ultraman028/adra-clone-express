@@ -49,14 +49,14 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="services" className="section-padding bg-section-background">
+      <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Services
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="section-divider mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Comprehensive WiFi monetization solutions that transform connectivity into revenue streams
           </p>
@@ -65,7 +65,7 @@ export const Services = () => {
         {/* Main Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="group card-hover glass-card">
               <CardContent className="p-6 text-center">
                 <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -85,7 +85,7 @@ export const Services = () => {
         </div>
 
         {/* Ad Types Section */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg mb-20">
+        <div className="glass-card rounded-2xl p-8 lg:p-12 mb-20">
           <h3 className="text-2xl font-bold text-center mb-8">Advertisement Types</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>

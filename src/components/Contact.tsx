@@ -32,14 +32,14 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="section-padding bg-gradient-subtle">
+      <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Contact
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="section-divider mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Get in touch with us to learn more about our WiFi monetization solutions
           </p>
@@ -51,7 +51,7 @@ export const Contact = () => {
             <h3 className="text-2xl font-bold mb-8">Get In Touch</h3>
             
             {contactInfo.map((info, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="card-hover glass-card">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 ${info.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -76,7 +76,7 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="hover:shadow-lg transition-shadow duration-300">
+          <Card className="card-hover glass-card">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6">Send Message</h3>
               

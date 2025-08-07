@@ -27,14 +27,14 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="about" className="section-padding bg-gradient-subtle">
+      <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             ABOUT US
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="section-divider mb-8"></div>
         </div>
 
         {/* Main About Content */}

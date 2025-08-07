@@ -50,14 +50,14 @@ export const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="portfolio" className="section-padding bg-background">
+      <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Portfolio
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="section-divider mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Adranet presents a user-friendly satellite-based internet service that simplifies access 
             to the online world without the complexities of integrating with conventional ISP backbones or backend systems.
@@ -67,7 +67,7 @@ export const Portfolio = () => {
         {/* Portfolio Grid */}
         <div className="grid lg:grid-cols-2 gap-8">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <Card key={index} className="group card-hover overflow-hidden glass-card">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-2">
                   {/* Image */}

@@ -37,14 +37,14 @@ export const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="team" className="section-padding bg-section-background">
+      <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Our Team
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <div className="section-divider mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Meet our leadership team at AdraNet Technologies Pvt Ltd, committed to driving 
             innovation and operational excellence.
@@ -54,7 +54,7 @@ export const Team = () => {
         {/* Team Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="group card-hover glass-card">
               <CardContent className="p-0">
                 {/* Image */}
                 <div className="relative overflow-hidden">
