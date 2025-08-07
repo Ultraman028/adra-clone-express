@@ -13,39 +13,29 @@ import mobileAppImage from "@/assets/mobile-app.png";
 export const Portfolio = () => {
   const portfolioItems = [
     {
-      icon: Smartphone,
       title: "Android App",
       description: "Developing an Android app for advertisement display can be a strategic endeavor for businesses looking to maximize their reach and engagement with their target audience.",
-      image: mobileAppImage,
-      color: "bg-green-500"
+      image: "https://adranet.com/assets/img/portfolio/android.jpg"
     },
     {
-      icon: Apple,
-      title: "iOS App",
-      description: "Creating an iOS app for advertisement display on Adranet involves crafting a user-friendly platform that effectively showcases advertisements while ensuring a seamless experience.",
-      image: mobileAppImage,
-      color: "bg-gray-800"
+      title: "IOS App", 
+      description: "Creating an iOS app for advertisement display on Adranet involves crafting a user-friendly platform that effectively showcases advertisements while ensuring a seamless experience for both advertisers and users",
+      image: "https://adranet.com/assets/img/portfolio/ios.jpg"
     },
     {
-      icon: Store,
       title: "Vendor App",
       description: "It is a versatile platform that empowers vendors to showcase their products and services effectively to their target audience.",
-      image: mobileAppImage,
-      color: "bg-blue-500"
+      image: "https://adranet.com/assets/img/portfolio/v11.jpg"
     },
     {
-      icon: Monitor,
-      title: "PC Application",
+      title: "PC",
       description: "It presents an opportunity to leverage the power of personal computers as effective platforms for showcasing promotional content to a wide audience.",
-      image: mobileAppImage,
-      color: "bg-purple-500"
+      image: "https://adranet.com/assets/img/portfolio/pc11.jpg"
     },
     {
-      icon: Tv,
       title: "Android Smart TV",
       description: "This platform serves as a powerful medium for advertisers to showcase their products and services on large screens, reaching a wider audience and making a lasting impression.",
-      image: mobileAppImage,
-      color: "bg-red-500"
+      image: "https://adranet.com/assets/img/portfolio/tv.jpg"
     }
   ];
 
@@ -65,42 +55,41 @@ export const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="space-y-12">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="group card-hover overflow-hidden glass-card">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-2">
-                  {/* Image */}
-                  <div className="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className={`absolute top-4 left-4 w-12 h-12 ${item.color} rounded-full flex items-center justify-center`}>
-                      <item.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                        {item.description}
-                      </p>
-                    </div>
-                    
-                    <Button variant="outline" className="w-fit">
+            <div key={index} className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Image */}
+              <div className={index % 2 === 0 ? 'order-1' : 'order-2'}>
+                <div className="relative overflow-hidden rounded-lg shadow-lg">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-64 lg:h-80 object-cover hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
+                  />
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className={index % 2 === 0 ? 'order-2' : 'order-1'}>
+                <Card className="glass-card">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-bold mb-4 text-primary">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {item.description}
+                    </p>
+                    <Button variant="outline" size="lg">
                       View Details
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           ))}
         </div>
 

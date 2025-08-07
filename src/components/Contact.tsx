@@ -14,7 +14,7 @@ export const Contact = () => {
     {
       icon: MapPin,
       title: "Our Address",
-      content: "Adranet Technologies Private Limited",
+      content: ["Adranet Technologies Pvt. Ltd.", "Office No. 305, 3rd Floor, Landge Landmark,", "Nashik Phata, Kasarwadi, PCMC,", "Maharashtra 411034"],
       color: "bg-blue-500"
     },
     {
@@ -59,15 +59,11 @@ export const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">{info.title}</h4>
-                      {Array.isArray(info.content) ? (
-                        <div className="space-y-1">
-                          {info.content.map((item, idx) => (
-                            <p key={idx} className="text-muted-foreground">{item}</p>
-                          ))}
-                        </div>
-                      ) : (
-                        <p className="text-muted-foreground">{info.content}</p>
-                      )}
+                      <div className="space-y-1">
+                        {info.content.map((item, idx) => (
+                          <p key={idx} className="text-muted-foreground">{item}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </CardContent>
